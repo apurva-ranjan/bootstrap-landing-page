@@ -1,0 +1,461 @@
+/* Loading Spinner Styles */
+#loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+/* =========================
+   1. Base Reset
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* =========================
+   2. CSS Variables (Theme)
+========================= */
+
+:root {
+  --primary-color: #0a0a0b;
+  --secondary-color: #6c757d;
+  --dark-color: #212529;
+  --light-color: #f8f9fa;
+  --text-color: #333;
+}
+/* =========================
+   3. Global Styles
+========================= */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 60px 0;
+}
+/* =========================
+   4. Hero Section
+========================= */
+
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url('../assets/images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;   /* REQUIRED */
+    color: #fff;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+
+    background-color: rgba(0, 0, 0, 0.75); /* THIS is the opacity you want */
+    filter:brightness(1.2) contrast(1.1);
+    z-index: 1;
+}
+
+#hero > * {
+    position: relative;
+    z-index: 2; /* text stays above overlay */
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+
+
+/* =========================
+   5. Service Cards
+========================= */
+
+/* =========================
+   Enhanced Services Section
+========================= */
+
+#services {
+  background: linear-gradient(180deg, #f8f9fa, #ffffff);
+}
+
+.service-card {
+  border: none;
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  background: #ffffff;
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 55px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 52px;
+  color: #0d6efd;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.15);
+  color: #0b5ed7;
+}
+
+.service-card h5 {
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.service-subtitle{
+  color: #6c757d;
+}
+
+
+/* =========================
+   6. Contact Form
+========================= */
+/* Card Styling */
+#contact .card {
+  border: none;
+  border-radius: 1rem;
+  padding: 0rem 0rem;
+  max-width: 900px;
+  max-height: 500px;
+  margin: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+#contact .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+
+/* Input Icons */
+#contact .form-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #6c757d;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+/* Input padding to fit icons */
+#contact .form-control.ps-5 {
+  padding-left: 3rem !important;
+}
+
+/* Input focus styles */
+#contact .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13,110,253,0.25);
+}
+
+/* Button hover */
+#contact .btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+
+
+/* Responsive spacing */
+@media (max-width: 576px) {
+  #contact .card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* =========================
+   7. Footer
+========================= */
+
+footer {
+  background-color: var(--dark-color);
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer i {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+footer i:hover {
+  color: var(--primary-color);
+}
+
+/* =========================
+   Enhanced About Section
+========================= */
+
+#about {
+  background-color: #ffffff;
+}
+
+.about-title {
+  font-weight: 700;
+}
+
+.about-text {
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.about-list i {
+  color: #0d6efd;
+  margin-right: 8px;
+}
+
+/* Image subtle effect */
+.about-image {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  opacity: 0.9;
+  
+}
+
+
+
+/* ------------------ DARK MODE ------------------ */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+    background-color: #000000 !important;
+}
+body.dark-mode .nav-link {
+    color: #ffffff !important;
+}
+
+/* Hero Section */
+body.dark-mode #hero::before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+body.dark-mode #hero > * {
+    color: #ffffff;
+}
+
+/* About Section */
+body.dark-mode #about {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .about-title {
+  color: #ffffff;
+}
+
+body.dark-mode .about-text {
+  color: #cccccc;
+}
+
+body.dark-mode .about-list li {
+  color: #ffffff;
+}
+
+body.dark-mode .about-image {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+
+/* Services Section */
+body.dark-mode #services {
+  background: linear-gradient(180deg, #121212, #1a1a1a);
+}
+
+body.dark-mode .service-card {
+  background: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .service-card p {
+  color: #cccccc;
+}
+
+body.dark-mode .service-icon {
+  color: #0d6efd;
+}
+body.dark-mode .service-subtitle{
+  color: #cccccc;
+}
+
+
+/* Contact Section*/
+body.dark-mode #contact {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+/* Dark Mode override for card */
+body.dark-mode #contact .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+/* Placeholder text in dark mode */
+body.dark-mode #contact .form-control::placeholder {
+  color: #cccccc;
+  opacity: 1;
+}
+
+/* Footer */
+body.dark-mode footer {
+    background-color: #000000;
+    color: #ffffff;
+}
+body.dark-mode footer a {
+    color: #ffffff;
+}
+
+/* Buttons */
+body.dark-mode .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+body.dark-mode .btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+/* Modals */
+body.dark-mode .modal-content {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Alerts */
+body.dark-mode .alert-success {
+    background-color: #198754;
+    color: #ffffff;
+}
+body.dark-mode .alert-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+/* Scroll-to-top button */
+body.dark-mode #scrollTopBtn {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+/* Optional: Font Awesome icons */
+body.dark-mode i {
+    color: #ffffff;
+}
+
+/* =========================
+   Scroll To Top Button
+========================= */
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 80px;          /* keeps it above footer */
+    right: 25px;           /* best-practice placement */
+    z-index: 1000;
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    background-color: #0d6efd;
+    color: #ffffff;
+    border: none;
+
+    display: none;         /* controlled by JS */
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover effect */
+#scrollTopBtn:hover {
+    transform: translateY(-4px);
+}
+
+/* Dark Mode Support */
+body.dark-mode #scrollTopBtn {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+/* =========================
+   Navbar Color Override
+========================= */
+
+.navbar {
+    background-color: #111113 !important; /* dark slate, premium look */
+}
+
+
