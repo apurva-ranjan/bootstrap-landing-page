@@ -104,10 +104,6 @@ section {
    5. Service Cards
 ========================= */
 
-/* =========================
-   Enhanced Services Section
-========================= */
-
 #services {
   background: linear-gradient(180deg, #f8f9fa, #ffffff);
 }
@@ -154,7 +150,6 @@ section {
 /* =========================
    6. Contact Form
 ========================= */
-/* Card Styling */
 #contact .card {
   border: none;
   border-radius: 1rem;
@@ -416,8 +411,8 @@ body.dark-mode i {
 
 #scrollTopBtn {
     position: fixed;
-    bottom: 80px;          /* keeps it above footer */
-    right: 25px;           /* best-practice placement */
+    bottom: 80px;          
+    right: 25px;          
     z-index: 1000;
 
     width: 45px;
@@ -428,7 +423,7 @@ body.dark-mode i {
     color: #ffffff;
     border: none;
 
-    display: none;         /* controlled by JS */
+    display: none;     
     align-items: center;
     justify-content: center;
 
@@ -455,7 +450,8 @@ body.dark-mode #scrollTopBtn {
 ========================= */
 
 .navbar {
-    background-color: #111113 !important; /* dark slate, premium look */
+    background-color: #111113 !important;
 }
+
 
 
